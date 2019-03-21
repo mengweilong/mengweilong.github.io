@@ -1,26 +1,22 @@
 ---
 title: nio2.0
 date: 2019-03-19 09:10:28
-categories:
-- java
-tags:
-- nio2.0
+categories: java
+tags: nio
+comments: true
 ---
 
 ## jdk1.7中文件系统的新操作，重点掌握
 
-### 接口Path,类Paths,[Files](www.baidu.com)
+### 接口Path,类Paths,Files
 
 ``` bash
 Path path = Paths.get("E:/tmp/js.html");//也可以是一个文件夹的路径
-System.out.println("文件的节点数"+path.get***());
-System.out.println("文件名"+path.getFileName());//js.html
-System.out.println("根目录"+path.getRoot());//E:/
-System.out.println("上级关联目录"+path.getParent());//E:/tmp  也就等于文件所在目录
+System.out.println("文件的属性"+path.get***());
 //还有toRealPath,toAbsolutePath等
 System.out.println(path.toUri());//file:///E:/tmp/js.html做文件缓存的功能可能用得上
 ```
-
+<!--more-->
 ### 以上示例有无js.html这个文件都是一样的，Path只是对传入路径的一些操作,那么如何判断文件或文件夹是否村在？
 
 ``` bash
